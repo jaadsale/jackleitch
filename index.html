@@ -120,6 +120,23 @@
     <h2><strong>IBMS Certificate of Competence - Institute of Biomedical Science</strong><br></h2>
     <p>Jul 2014</p>
 
+    <h1>Contact Me</h1>
+    <form action="send_email.php" method="post">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" maxlength="250"><br><br> <!-- Added maxlength -->
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required maxlength="250"></textarea><br><br> <!-- Added maxlength -->
+        
+        <input type="submit" value="Send Message">
+    </form>
+
      <a href="https://www.linkedin.com/in/jack-leitch-53847913?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3wIqNi1%2BQIaw%2BAoWODcmxA%3D%3D" target="_blank">
             <img class="linkedin-img" src="https://raw.githubusercontent.com/jaadsale/jackleitch.github.io/main/linkedin.png" alt="LinkedIn Profile">
         </a>
