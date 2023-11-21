@@ -129,13 +129,32 @@
         <input type="email" id="email" name="email" required><br><br>
         
         <label for="subject">Subject:</label><br>
-        <input type="text" id="subject" name="subject" maxlength="250"><br><br> <!-- Added maxlength -->
+        <input type="text" id="subject" name="subject" maxlength="250"><br>
+        <span id="subjectCount">0/250</span><br><br> <!-- Display character count for subject -->
         
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" required maxlength="250"></textarea><br><br> <!-- Added maxlength -->
+        <textarea id="message" name="message" rows="4" required maxlength="250"></textarea><br>
+        <span id="messageCount">0/250</span><br><br> <!-- Display character count for message -->
         
         <input type="submit" value="Send Message">
     </form>
+
+    <script>
+        const subjectField = document.getElementById('subject');
+        const subjectCount = document.getElementById('subjectCount');
+        const messageField = document.getElementById('message');
+        const messageCount = document.getElementById('messageCount');
+
+        subjectField.addEventListener('input', () => {
+            const count = subjectField.value.length;
+            subjectCount.textContent = `${count}/250`;
+        });
+
+        messageField.addEventListener('input', () => {
+            const count = messageField.value.length;
+            messageCount.textContent = `${count}/250`;
+        });
+    </script>
 
      <a href="https://www.linkedin.com/in/jack-leitch-53847913?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3wIqNi1%2BQIaw%2BAoWODcmxA%3D%3D" target="_blank">
             <img class="linkedin-img" src="https://raw.githubusercontent.com/jaadsale/jackleitch.github.io/main/linkedin.png" alt="LinkedIn Profile">
